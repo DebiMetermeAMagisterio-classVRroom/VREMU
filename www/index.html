@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS  -->
+    <style>
+        body{
+            background: rgb(230,100,101);
+            background: linear-gradient(207deg, rgba(142,198,255,1) 0%, rgba(255,255,255,1) 100%);       }  
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<!-- Page Body  -->
+<body style="text-align:center; vertical-align: middle;">
+    <div class="row" id="inici">
+        <h2>Inici de sessió</h2>
+        <form class="col s12">
+          <div class="row" id="api">
+            <div class="input-field col s12" >
+              <input type="text" name="URL" id="URL" class="inputbox" placeholder="API" value="https://vrprojectams.herokuapp.com">
+              <label>API</label>
+            </div>
+          </div>
+          <div class="row" id="pin">
+            <div class="input-field col s12">
+              <input placeholder="Pin" id="pin" type="text" class="validate">
+              <label for="pin">Pin</label>
+            </div>
+          </div>
+          <button id="loginButton" class="btn waves-effect waves-light">Entrar
+            <i class="material-icons right">send</i>
+        </button>
+        </form>
+        
+    </div>
+    <!--  Scripts-->
+    <script src="cordova.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>
