@@ -1,0 +1,155 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: white;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+html, body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  background: white;
+}
+
+#tabs-swipe-demo {
+  background: #c6e2ff;
+}
+
+#tab1 {
+  color: black;
+  font-weight: 500;
+}
+
+#tab2 {
+  color: black;
+  font-weight: 500;
+}
+
+#coursesNav {
+  background: #6fb6ff;
+}
+ 
+.tabs-content {
+  height: 100%;
+}
+
+.collection-item {
+  background: rgba(142,198,255,1) !important;
+  color: white !important;
+  margin: 5% 5% !important;
+  border-radius: 60px;
+}
+
+.details_head {
+  background: rgba(142,198,255,1);
+  color: white;
+  margin: 5% 5%;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  border-radius: 60px;
+}
+
+.details_titles {
+  background: #c6e2ff;
+  margin: 2% 5%;
+  padding-left: 3%;
+  padding-bottom: 0.75%;
+  border-radius: 60px;
+}
+
+.details_elements {
+  margin: 0 5%;
+  padding-left: 3%;
+  padding-bottom: 0.5%;
+}
+
+.collection {
+  border: 0px;
+}
+
+#inici {
+  padding-top: 20%;
+}
+
+h2 {
+ color: #4ba4ff ;
+ font-weight: 600;
+ text-transform: uppercase;
+ font-family: 'Helvetica';
+ margin-bottom: 6% !important;
+}
+
+#sendButton {
+  background-color: #4ba4ff;
+}
+
+#passed_items {
+  margin-bottom: 5% !important;
+}
+
+#failed_items {
+  margin-bottom: 5% !important;
+}
+
+#grade_items {
+  margin-bottom: 5% !important;
+}
+
+#metadades_items {
+  margin-bottom: 8% !important;
+}

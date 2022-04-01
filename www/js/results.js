@@ -1,7 +1,6 @@
 (function($){
   $(function(){
 
-    //$('.parallax').parallax();
     $('select').formSelect();
     
 
@@ -15,27 +14,23 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
     //LoginButton onclick function
-    $("#loginButton").click(function(){
+    $("#sendButton").click(function(){
+
+      autograde={
+        "passed_items":$('#passed').val()
+        "failed_items":$('#failed').val()
+        "score":$('#grade').val()
+        "metadata":$('#metadata').val()
+      }
 
       $.ajax({
-        method: "GET",
-        url: $('#URL').val()+"/api/start_vr_exercise",
-        data : {"pin":String($('.validate').val())},
+        method: "POST",
+        url: $('#URL').val()+"/api/finish_vr_exercise",
+        data : {"pin":localStorage.getItem("PIN"),"autograde":autograde,"VRexerciseID":localStorage.getItem("ID"),"exVersion":localStorage.getItem("version")},
         dataType: "json",
       }).done(function (info) {
 
-        if(info["status"] == "OK"){
-          alert("Pin correcte");
-
-          localStorage.setItem("PIN", $('#pin').val())
-          localStorage.setItem("ID", info["vrExID"])
-          localStorage.setItem("version", info["vrExVersion"])
-          
-          window.location.assign('results.html');
-
-        }else{
-          alert(info['message']);
-        }
+        alert("VR-Task results saved successfully");
 
       }).fail(function(){
         alert("URL no valida");

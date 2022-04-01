@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Results</title>
+
+  <!-- CSS  -->
+  <style>
+      body{
+          background: rgb(230,100,101) !important;
+          background: linear-gradient(207deg, rgba(142,198,255,1) 0%, rgba(255,255,255,1) 100%) !important;       }  
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/styleResults.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <body style="text-align:center; vertical-align: middle;">
+    <div class="row" id="inici">
+        <h2>TASK RESULTS</h2>
+        <form class="col s12">
+          <div class="row" id="passed_items">
+            <div class="input-field col s12" >
+              <input type="text" name="passed" id="passed" class="inputbox">
+              <label>Passed items:</label>
+            </div>
+          </div>
+          <div class="row" id="failed_items">
+            <div class="input-field col s12" >
+              <input type="text" name="failed" id="failed" class="inputbox">
+              <label>Failed items:</label>
+            </div>
+          </div>
+          <div class="row" id="grade_items">
+            <div class="input-field col s12" >
+              <input type="text" name="grade" id="grade" class="inputbox">
+              <label>Grade (%):</label>
+            </div>
+          </div>
+          <div class="row" id="metadades_items">
+            <div class="input-field col s12" >
+              <input type="text" name="metadata" id="metadata" class="inputbox">
+              <label>Metadata (text):</label>
+            </div>
+          </div>
+          <button id="sendButton" class="btn waves-effect waves-light">Send
+            <i class="material-icons right">send</i>
+        </button>
+        </form>
+    </div>
+
+  <!--  Scripts  -->
+  <script src="cordova.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/results.js"></script>
+
+  </body>
+</html>
