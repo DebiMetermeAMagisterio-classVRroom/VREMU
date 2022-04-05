@@ -28,8 +28,8 @@ function onDeviceReady() {
           alert("Pin correcte");
 
           localStorage.setItem("PIN", $('#pin').val())
-          localStorage.setItem("ID", info["vrExID"])
-          localStorage.setItem("version", info["vrExVersion"])
+          localStorage.setItem("ID", info["VRexerciseID"])
+          localStorage.setItem("version", info["minExVersion"])
           
           window.location.assign('results.html');
 
