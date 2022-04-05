@@ -1,7 +1,6 @@
 (function($){
   $(function(){
 
-    //$('.parallax').parallax();
     $('select').formSelect();
     
 
@@ -27,9 +26,10 @@ function onDeviceReady() {
         if(info["status"] == "OK"){
           alert("Pin correcte");
 
-          localStorage.setItem("PIN", $('#pin').val())
-          localStorage.setItem("ID", info["VRexerciseID"])
-          localStorage.setItem("version", info["minExVersion"])
+          localStorage.setItem("PIN", String($('.validate').val()));
+          localStorage.setItem("ID", info["VRexerciseID"]);
+          localStorage.setItem("version", info["minExVersion"]);
+          localStorage.setItem("URL",$('#URL').val());
           
           window.location.assign('results.html');
 
