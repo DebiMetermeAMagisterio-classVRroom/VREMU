@@ -16,12 +16,11 @@ function onDeviceReady() {
     //LoginButton onclick function
     $("#sendButton").click(function(){
       autograde={
-        "passed_items":$('#passed').val(),
-        "failed_items":$('#failed').val(),
-        "score":$('#grade').val(),
+        "passed_items":parseInt($('#passed').val()),
+        "failed_items":parseInt($('#failed').val()),
+        "score":parseInt($('#grade').val()),
         "metadata":$('#metadata').val()
       };
-      autograde= JSON.stringify(autograde);
       pin=localStorage.getItem("PIN");
       VRexerciseID=parseInt(localStorage.getItem("ID"));
       exVersion=parseInt(localStorage.getItem("version"));
