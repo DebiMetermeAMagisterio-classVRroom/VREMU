@@ -24,7 +24,7 @@ function onDeviceReady() {
       }).done(function (info) {
 
         if(info["status"] == "OK"){
-          alert("Pin correcte");
+          alert("Correct Pin");
 
           localStorage.setItem("PIN", String($('.validate').val()));
           localStorage.setItem("ID", info["VRexerciseID"]);
@@ -38,7 +38,7 @@ function onDeviceReady() {
         }
 
       }).fail(function(){
-        alert("URL no valida");
+        alert("No valid URL");
       });      
       
       //Page reload prevention

@@ -15,7 +15,6 @@ function onDeviceReady() {
 
     //LoginButton onclick function
     $("#sendButton").click(function(){
-      console.log("dins el sendButton");
       autograde={
         "passed_items":$('#passed').val(),
         "failed_items":$('#failed').val(),
@@ -27,13 +26,6 @@ function onDeviceReady() {
       VRexerciseID=parseInt(localStorage.getItem("ID"));
       exVersion=parseInt(localStorage.getItem("version"));
 
-      console.log(autograde);
-      console.log(pin);
-      console.log(typeof(pin));
-      console.log(VRexerciseID);
-      console.log(exVersion);
-      console.log(localStorage.getItem("URL"));
-
       $.ajax({
         method: "POST",
         url: localStorage.getItem("URL")+"/api/finish_vr_exercise",
@@ -42,12 +34,10 @@ function onDeviceReady() {
         contentType: "application/json"
 
       }).done(function (info) {
-        console.log(info);
         alert("VR-Task results saved successfully");
 
       }).fail(function(info){
-        alert("URL no valida");
-        console.log(info);
+        alert("No valid URL");
       });      
       
       //Page reload prevention
